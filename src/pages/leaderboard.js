@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import * as query from '../contract/query';
 import { useConnectedWallet } from '@terra-money/wallet-provider';
+import WalletAddress from '../components/WalletAddress';
 
 const Leaderboard = () => {
   const [scores, setScores] = useState();
@@ -54,6 +55,7 @@ const Leaderboard = () => {
             <p>Only you can save us from Goblin town</p>
           </div>
         </Link>
+        <WalletAddress />
       </header>
 
       <div className="score-board-container">
